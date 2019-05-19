@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:ApiProvider/ApiProvider.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FundaApi/FundaApi.xcodeproj">
+   </FileRef>
 </Workspace>
