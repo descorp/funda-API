@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Common</key>
+	<dict>
+		<key>AppKey</key>
+		<string>ac1b0b1572524640a0ecc54de453ea9f</string>
+		<key>Url</key>
+		<string>http://partnerapi.funda.nl/feeds/Aanbod.svc/json</string>
+	</dict>
+</dict>
+</plist>
