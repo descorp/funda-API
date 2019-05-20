@@ -7,4 +7,7 @@
    <FileRef
       location = "group:FundaApi/FundaApi.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:FundaPlayground.playground">
+   </FileRef>
 </Workspace>

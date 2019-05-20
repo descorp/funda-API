@@ -9,15 +9,15 @@
 import Foundation
 import ApiProvider
 
-class FundaRequestBuilder: RequestBuilder {
+public class FundaRequestBuilder: RequestBuilder {
     
     private let config : Configuration
     
-    init(with configuration: Configuration) {
+    public init(with configuration: Configuration) {
         self.config = configuration
     }
     
-    func buildRequest<T>(for endpoint: Endpoint<T>) -> URLRequest? {
+    public func buildRequest<T>(for endpoint: Endpoint<T>) -> URLRequest? {
         guard var components = URLComponents(string: config.url)
             else { preconditionFailure("invalud URL in config file") }
         
