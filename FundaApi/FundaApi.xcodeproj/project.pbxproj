@@ -22,9 +22,10 @@
 		402070B6229096810063A30E /* Prijs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070B5229096810063A30E /* Prijs.swift */; };
 		402070C32290A42E0063A30E /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070C22290A42E0063A30E /* Get.swift */; };
 		402070F82290BC760063A30E /* ApiProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402070F72290BC760063A30E /* ApiProvider.framework */; };
-		402071052290BED80063A30E /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071042290BED80063A30E /* EnvironmentConfiguration.swift */; };
+		402071052290BED80063A30E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071042290BED80063A30E /* Configuration.swift */; };
 		402071112291EE8C0063A30E /* FundaRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071102291EE8C0063A30E /* FundaRequestBuilder.swift */; };
 		40207114229211FA0063A30E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4020711222920AAD0063A30E /* config.plist */; };
+		402071162292237F0063A30E /* FundaRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071152292237F0063A30E /* FundaRequestBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		402070B5229096810063A30E /* Prijs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prijs.swift; sourceTree = "<group>"; };
 		402070C22290A42E0063A30E /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		402070F72290BC760063A30E /* ApiProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		402071042290BED80063A30E /* EnvironmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfiguration.swift; sourceTree = "<group>"; };
+		402071042290BED80063A30E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		402071102291EE8C0063A30E /* FundaRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundaRequestBuilder.swift; sourceTree = "<group>"; };
 		4020711222920AAD0063A30E /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		402071152292237F0063A30E /* FundaRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundaRequestBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 				402070BF2290A1100063A30E /* Endpoints */,
 				4000D763228DF9870090CA4E /* DTOs */,
 				402071102291EE8C0063A30E /* FundaRequestBuilder.swift */,
-				402071042290BED80063A30E /* EnvironmentConfiguration.swift */,
+				402071042290BED80063A30E /* Configuration.swift */,
 			);
 			path = FundaApi;
 			sourceTree = "<group>";
@@ -115,9 +117,10 @@
 		4000D756228DEDE50090CA4E /* FundaApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				4000D757228DEDE50090CA4E /* FundaApiTests.swift */,
 				4000D759228DEDE50090CA4E /* Info.plist */,
 				4020711222920AAD0063A30E /* config.plist */,
+				4000D757228DEDE50090CA4E /* FundaApiTests.swift */,
+				402071152292237F0063A30E /* FundaRequestBuilderTests.swift */,
 			);
 			path = FundaApiTests;
 			sourceTree = "<group>";
@@ -293,7 +296,7 @@
 				402070A7229092480063A30E /* JSONAny.swift in Sources */,
 				402070AA229092710063A30E /* JSONCodingKey.swift in Sources */,
 				402070B0229095C10063A30E /* PromoLabel.swift in Sources */,
-				402071052290BED80063A30E /* EnvironmentConfiguration.swift in Sources */,
+				402071052290BED80063A30E /* Configuration.swift in Sources */,
 				402070AC2290928F0063A30E /* JSONNull.swift in Sources */,
 				402070B4229096710063A30E /* Object.swift in Sources */,
 				402070AE229095A00063A30E /* Paging.swift in Sources */,
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402071162292237F0063A30E /* FundaRequestBuilderTests.swift in Sources */,
 				4000D758228DEDE50090CA4E /* FundaApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
