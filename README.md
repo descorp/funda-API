@@ -1,5 +1,7 @@
 [![codebeat badge](https://codebeat.co/badges/fc671989-7aeb-4b3b-a5fb-9d918fcd0e54)](https://codebeat.co/projects/github-com-descorp-funda-api-master)
 
+<img src="https://assets.fstatic.nl/master_2282/assets/components/logo/fundawonen-logo.svg" alt="logo" width="250"/>
+
 # funda-API
 API for Funda.nl
 
