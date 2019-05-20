@@ -12,7 +12,7 @@ Solution spited into 2 projects + Swift Playground :
 ### ApiProvider
 Library to work with Json API's. Providers convenient and secure way to access HTTP APIs
 
-### FundaApi              - 
+### FundaApi
 Wrapper based on ApiProvider to implement Funda API. 
 Contains DTO, Endpoint and Tests. 
 DTOs are generated via https://app.quicktype.io/. 
