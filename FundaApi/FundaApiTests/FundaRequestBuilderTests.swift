@@ -9,8 +9,14 @@
 import Foundation
 
 import XCTest
+
+#if os(OSX)
+import ApiProviderMac
+@testable import FundaApiMac
+#elseif os(iOS)
 import ApiProvider
 @testable import FundaApi
+#endif
 
 class FundaRequestBuilderTests: XCTestCase {
     

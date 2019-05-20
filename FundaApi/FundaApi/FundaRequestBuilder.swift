@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if os(OSX)
+import ApiProviderMac
+#elseif os(iOS)
 import ApiProvider
+#endif
 
 public class FundaRequestBuilder: RequestBuilder {
     

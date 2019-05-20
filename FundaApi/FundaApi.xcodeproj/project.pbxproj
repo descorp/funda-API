@@ -26,6 +26,23 @@
 		402071112291EE8C0063A30E /* FundaRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071102291EE8C0063A30E /* FundaRequestBuilder.swift */; };
 		40207114229211FA0063A30E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4020711222920AAD0063A30E /* config.plist */; };
 		402071162292237F0063A30E /* FundaRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071152292237F0063A30E /* FundaRequestBuilderTests.swift */; };
+		40F3A2F422934E490062677D /* FundaApiMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F3A2EB22934E490062677D /* FundaApiMac.framework */; };
+		40F3A30222934EA60062677D /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070C22290A42E0063A30E /* Get.swift */; };
+		40F3A30322934EAC0062677D /* PromoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070AF229095C10063A30E /* PromoLabel.swift */; };
+		40F3A30422934EAC0062677D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070B1229096000063A30E /* Project.swift */; };
+		40F3A30522934EAC0062677D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070B3229096710063A30E /* Object.swift */; };
+		40F3A30622934EAC0062677D /* Prijs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070B5229096810063A30E /* Prijs.swift */; };
+		40F3A30722934EB20062677D /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070AD229095A00063A30E /* Paging.swift */; };
+		40F3A30822934EB20062677D /* Responce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000D764228DF9A80090CA4E /* Responce.swift */; };
+		40F3A30922934EB20062677D /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000D766228E049A0090CA4E /* Meta.swift */; };
+		40F3A30A22934EB50062677D /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070A6229092480063A30E /* JSONAny.swift */; };
+		40F3A30B22934EB50062677D /* JSONCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070A9229092710063A30E /* JSONCodingKey.swift */; };
+		40F3A30C22934EB50062677D /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070AB2290928F0063A30E /* JSONNull.swift */; };
+		40F3A30D22934EB90062677D /* FundaRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071102291EE8C0063A30E /* FundaRequestBuilder.swift */; };
+		40F3A30E22934EB90062677D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071042290BED80063A30E /* Configuration.swift */; };
+		40F3A30F229350510062677D /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4020711222920AAD0063A30E /* config.plist */; };
+		40F3A310229350510062677D /* FundaApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000D757228DEDE50090CA4E /* FundaApiTests.swift */; };
+		40F3A311229350510062677D /* FundaRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071152292237F0063A30E /* FundaRequestBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +52,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4000D748228DEDE40090CA4E;
 			remoteInfo = FundaApi;
+		};
+		40F3A2F522934E490062677D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4000D740228DEDE40090CA4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F3A2EA22934E490062677D;
+			remoteInfo = FundaApiMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +85,9 @@
 		402071102291EE8C0063A30E /* FundaRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundaRequestBuilder.swift; sourceTree = "<group>"; };
 		4020711222920AAD0063A30E /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		402071152292237F0063A30E /* FundaRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundaRequestBuilderTests.swift; sourceTree = "<group>"; };
+		40F3A2EB22934E490062677D /* FundaApiMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FundaApiMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A2ED22934E490062677D /* FundaApiMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundaApiMac.h; sourceTree = "<group>"; };
+		40F3A2F322934E490062677D /* FundaApiMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FundaApiMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +104,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4000D753228DEDE50090CA4E /* FundaApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2E822934E490062677D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2F022934E490062677D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2F422934E490062677D /* FundaApiMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +140,8 @@
 			children = (
 				4000D749228DEDE40090CA4E /* FundaApi.framework */,
 				4000D752228DEDE50090CA4E /* FundaApiTests.xctest */,
+				40F3A2EB22934E490062677D /* FundaApiMac.framework */,
+				40F3A2F322934E490062677D /* FundaApiMacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +213,7 @@
 		402070C42290A5960063A30E /* META */ = {
 			isa = PBXGroup;
 			children = (
+				40F3A2ED22934E490062677D /* FundaApiMac.h */,
 				4000D74C228DEDE40090CA4E /* FundaApi.h */,
 				4000D74D228DEDE40090CA4E /* Info.plist */,
 			);
@@ -191,6 +236,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4000D75A228DEDE50090CA4E /* FundaApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2E622934E490062677D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +285,42 @@
 			productReference = 4000D752228DEDE50090CA4E /* FundaApiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		40F3A2EA22934E490062677D /* FundaApiMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F3A30022934E490062677D /* Build configuration list for PBXNativeTarget "FundaApiMac" */;
+			buildPhases = (
+				40F3A2E622934E490062677D /* Headers */,
+				40F3A2E722934E490062677D /* Sources */,
+				40F3A2E822934E490062677D /* Frameworks */,
+				40F3A2E922934E490062677D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FundaApiMac;
+			productName = FundaApiMac;
+			productReference = 40F3A2EB22934E490062677D /* FundaApiMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		40F3A2F222934E490062677D /* FundaApiMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F3A30122934E490062677D /* Build configuration list for PBXNativeTarget "FundaApiMacTests" */;
+			buildPhases = (
+				40F3A2EF22934E490062677D /* Sources */,
+				40F3A2F022934E490062677D /* Frameworks */,
+				40F3A2F122934E490062677D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40F3A2F622934E490062677D /* PBXTargetDependency */,
+			);
+			name = FundaApiMacTests;
+			productName = FundaApiMacTests;
+			productReference = 40F3A2F322934E490062677D /* FundaApiMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +336,12 @@
 						LastSwiftMigration = 1020;
 					};
 					4000D751228DEDE50090CA4E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					40F3A2EA22934E490062677D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					40F3A2F222934E490062677D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -266,6 +360,8 @@
 			targets = (
 				4000D748228DEDE40090CA4E /* FundaApi */,
 				4000D751228DEDE50090CA4E /* FundaApiTests */,
+				40F3A2EA22934E490062677D /* FundaApiMac */,
+				40F3A2F222934E490062677D /* FundaApiMacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,6 +379,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				40207114229211FA0063A30E /* config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2E922934E490062677D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2F122934E490062677D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A30F229350510062677D /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +429,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40F3A2E722934E490062677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A30A22934EB50062677D /* JSONAny.swift in Sources */,
+				40F3A30322934EAC0062677D /* PromoLabel.swift in Sources */,
+				40F3A30622934EAC0062677D /* Prijs.swift in Sources */,
+				40F3A30222934EA60062677D /* Get.swift in Sources */,
+				40F3A30722934EB20062677D /* Paging.swift in Sources */,
+				40F3A30B22934EB50062677D /* JSONCodingKey.swift in Sources */,
+				40F3A30D22934EB90062677D /* FundaRequestBuilder.swift in Sources */,
+				40F3A30E22934EB90062677D /* Configuration.swift in Sources */,
+				40F3A30922934EB20062677D /* Meta.swift in Sources */,
+				40F3A30822934EB20062677D /* Responce.swift in Sources */,
+				40F3A30522934EAC0062677D /* Object.swift in Sources */,
+				40F3A30C22934EB50062677D /* JSONNull.swift in Sources */,
+				40F3A30422934EAC0062677D /* Project.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2EF22934E490062677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A311229350510062677D /* FundaRequestBuilderTests.swift in Sources */,
+				40F3A310229350510062677D /* FundaApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -325,6 +465,11 @@
 			isa = PBXTargetDependency;
 			target = 4000D748228DEDE40090CA4E /* FundaApi */;
 			targetProxy = 4000D754228DEDE50090CA4E /* PBXContainerItemProxy */;
+		};
+		40F3A2F622934E490062677D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F3A2EA22934E490062677D /* FundaApiMac */;
+			targetProxy = 40F3A2F522934E490062677D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +687,106 @@
 			};
 			name = Release;
 		};
+		40F3A2FC22934E490062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FundaApi/META/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.FundaApiMac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40F3A2FD22934E490062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FundaApi/META/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.FundaApiMac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		40F3A2FE22934E490062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				INFOPLIST_FILE = FundaApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.FundaApiMacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40F3A2FF22934E490062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				INFOPLIST_FILE = FundaApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.FundaApiMacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +813,24 @@
 			buildConfigurations = (
 				4000D761228DEDE50090CA4E /* Debug */,
 				4000D762228DEDE50090CA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F3A30022934E490062677D /* Build configuration list for PBXNativeTarget "FundaApiMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2FC22934E490062677D /* Debug */,
+				40F3A2FD22934E490062677D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F3A30122934E490062677D /* Build configuration list for PBXNativeTarget "FundaApiMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2FE22934E490062677D /* Debug */,
+				40F3A2FF22934E490062677D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

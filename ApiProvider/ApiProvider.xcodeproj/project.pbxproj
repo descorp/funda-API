@@ -18,6 +18,16 @@
 		4020710B2291B9150063A30E /* RemoteApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020710A2291B9150063A30E /* RemoteApiProvider.swift */; };
 		4020710D2291BC480063A30E /* LocalApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020710C2291BC480063A30E /* LocalApiProvider.swift */; };
 		4020710F2291E3B50063A30E /* tfl.gov.uk.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4020710E2291E3B50063A30E /* tfl.gov.uk.cer */; };
+		40F3A2CD22934BBB0062677D /* ApiProviderMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F3A2C422934BBA0062677D /* ApiProviderMac.framework */; };
+		40F3A2DB22934BD30062677D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070F42290BC300063A30E /* Endpoint.swift */; };
+		40F3A2DC22934BD30062677D /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070FB2290BD410063A30E /* ApiProvider.swift */; };
+		40F3A2DD22934BD30062677D /* RemoteApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020710A2291B9150063A30E /* RemoteApiProvider.swift */; };
+		40F3A2DE22934BD30062677D /* LocalApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020710C2291BC480063A30E /* LocalApiProvider.swift */; };
+		40F3A2DF22934BDA0062677D /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070FE2290BE000063A30E /* Parsable.swift */; };
+		40F3A2E022934BDA0062677D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070FF2290BE000063A30E /* Configuration.swift */; };
+		40F3A2E122934BDA0062677D /* SecureURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402071022290BE2C0063A30E /* SecureURLSession.swift */; };
+		40F3A2E222934C060062677D /* tfl.gov.uk.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4020710E2291E3B50063A30E /* tfl.gov.uk.cer */; };
+		40F3A2E322934C060062677D /* ApiProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402070DD2290BA900063A30E /* ApiProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +37,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 402070CE2290BA8F0063A30E;
 			remoteInfo = ApiProvider;
+		};
+		40F3A2CE22934BBB0062677D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 402070C62290BA8F0063A30E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F3A2C322934BBA0062677D;
+			remoteInfo = ApiProviderMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +62,9 @@
 		4020710A2291B9150063A30E /* RemoteApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteApiProvider.swift; sourceTree = "<group>"; };
 		4020710C2291BC480063A30E /* LocalApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiProvider.swift; sourceTree = "<group>"; };
 		4020710E2291E3B50063A30E /* tfl.gov.uk.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = tfl.gov.uk.cer; sourceTree = "<group>"; };
+		40F3A2C422934BBA0062677D /* ApiProviderMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiProviderMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A2C622934BBA0062677D /* ApiProviderMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiProviderMac.h; sourceTree = "<group>"; };
+		40F3A2CC22934BBA0062677D /* ApiProviderMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiProviderMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40F3A2C122934BBA0062677D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2C922934BBA0062677D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2CD22934BBB0062677D /* ApiProviderMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +106,7 @@
 			children = (
 				402070D12290BA8F0063A30E /* ApiProvider */,
 				402070DC2290BA900063A30E /* ApiProviderTests */,
+				40F3A2C522934BBA0062677D /* ApiProviderMac */,
 				402070D02290BA8F0063A30E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +116,8 @@
 			children = (
 				402070CF2290BA8F0063A30E /* ApiProvider.framework */,
 				402070D82290BA900063A30E /* ApiProviderTests.xctest */,
+				40F3A2C422934BBA0062677D /* ApiProviderMac.framework */,
+				40F3A2CC22934BBA0062677D /* ApiProviderMacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +148,7 @@
 		402070F22290BC120063A30E /* META */ = {
 			isa = PBXGroup;
 			children = (
+				40F3A2C622934BBA0062677D /* ApiProviderMac.h */,
 				402070D22290BA8F0063A30E /* ApiProvider.h */,
 				402070D32290BA8F0063A30E /* Info.plist */,
 			);
@@ -126,6 +165,13 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		40F3A2C522934BBA0062677D /* ApiProviderMac */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiProviderMac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -134,6 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				402070E02290BA900063A30E /* ApiProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2BF22934BBA0062677D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +229,42 @@
 			productReference = 402070D82290BA900063A30E /* ApiProviderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		40F3A2C322934BBA0062677D /* ApiProviderMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F3A2D922934BBB0062677D /* Build configuration list for PBXNativeTarget "ApiProviderMac" */;
+			buildPhases = (
+				40F3A2BF22934BBA0062677D /* Headers */,
+				40F3A2C022934BBA0062677D /* Sources */,
+				40F3A2C122934BBA0062677D /* Frameworks */,
+				40F3A2C222934BBA0062677D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApiProviderMac;
+			productName = ApiProviderMac;
+			productReference = 40F3A2C422934BBA0062677D /* ApiProviderMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		40F3A2CB22934BBA0062677D /* ApiProviderMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F3A2DA22934BBB0062677D /* Build configuration list for PBXNativeTarget "ApiProviderMacTests" */;
+			buildPhases = (
+				40F3A2C822934BBA0062677D /* Sources */,
+				40F3A2C922934BBA0062677D /* Frameworks */,
+				40F3A2CA22934BBA0062677D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40F3A2CF22934BBB0062677D /* PBXTargetDependency */,
+			);
+			name = ApiProviderMacTests;
+			productName = ApiProviderMacTests;
+			productReference = 40F3A2CC22934BBA0062677D /* ApiProviderMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,6 +280,12 @@
 						LastSwiftMigration = 1020;
 					};
 					402070D72290BA900063A30E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					40F3A2C322934BBA0062677D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					40F3A2CB22934BBA0062677D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -209,6 +304,8 @@
 			targets = (
 				402070CE2290BA8F0063A30E /* ApiProvider */,
 				402070D72290BA900063A30E /* ApiProviderTests */,
+				40F3A2C322934BBA0062677D /* ApiProviderMac */,
+				40F3A2CB22934BBA0062677D /* ApiProviderMacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +323,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4020710F2291E3B50063A30E /* tfl.gov.uk.cer in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2C222934BBA0062677D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2CA22934BBA0062677D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2E222934C060062677D /* tfl.gov.uk.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +366,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40F3A2C022934BBA0062677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2E022934BDA0062677D /* Configuration.swift in Sources */,
+				40F3A2DF22934BDA0062677D /* Parsable.swift in Sources */,
+				40F3A2E122934BDA0062677D /* SecureURLSession.swift in Sources */,
+				40F3A2DB22934BD30062677D /* Endpoint.swift in Sources */,
+				40F3A2DE22934BD30062677D /* LocalApiProvider.swift in Sources */,
+				40F3A2DC22934BD30062677D /* ApiProvider.swift in Sources */,
+				40F3A2DD22934BD30062677D /* RemoteApiProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F3A2C822934BBA0062677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2E322934C060062677D /* ApiProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -261,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = 402070CE2290BA8F0063A30E /* ApiProvider */;
 			targetProxy = 402070DA2290BA900063A30E /* PBXContainerItemProxy */;
+		};
+		40F3A2CF22934BBB0062677D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F3A2C322934BBA0062677D /* ApiProviderMac */;
+			targetProxy = 40F3A2CE22934BBB0062677D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,6 +617,106 @@
 			};
 			name = Release;
 		};
+		40F3A2D522934BBB0062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ApiProvider/META/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.ApiProviderMac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40F3A2D622934BBB0062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ApiProvider/META/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.ApiProviderMac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		40F3A2D722934BBB0062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				INFOPLIST_FILE = ApiProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.ApiProviderMacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40F3A2D822934BBB0062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				INFOPLIST_FILE = ApiProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.descorp.api-provider.ApiProviderMacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -504,6 +743,24 @@
 			buildConfigurations = (
 				402070E72290BA900063A30E /* Debug */,
 				402070E82290BA900063A30E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F3A2D922934BBB0062677D /* Build configuration list for PBXNativeTarget "ApiProviderMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2D522934BBB0062677D /* Debug */,
+				40F3A2D622934BBB0062677D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F3A2DA22934BBB0062677D /* Build configuration list for PBXNativeTarget "ApiProviderMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2D722934BBB0062677D /* Debug */,
+				40F3A2D822934BBB0062677D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

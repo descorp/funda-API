@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FundaConsole/FundaConsole.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ApiProvider/ApiProvider.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FundaApi/FundaApi.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:FundaPlayground.playground">
    </FileRef>
 </Workspace>

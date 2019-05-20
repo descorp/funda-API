@@ -7,7 +7,13 @@
 //
 
 import XCTest
+
+#if os(OSX)
+@testable import ApiProviderMac
+#elseif os(iOS)
 @testable import ApiProvider
+#endif
+
 
 class LondonMetroApiProviderTests: XCTestCase {
     
