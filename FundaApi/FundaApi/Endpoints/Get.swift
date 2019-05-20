@@ -22,12 +22,16 @@ public extension Endpoint where T == Response<Object> {
         queries.append(URLQueryItem(name: "type", value: type.rawValue))
         
         if !search.isEmpty {
-            let preparedSearch = search.map { $0.hasPrefix("/") ? $0 : "/\($0)" }
-            queries.append(URLQueryItem(name: "zo", value: preparedSearch.joined(separator: "/") ))
+            let preparedSearch = search.map { $0.trimmingCharacters(in: CharacterSet(arrayLiteral: "/")) }
+            queries.append(URLQueryItem(name: "zo", value: "/" + preparedSearch.joined(separator: "/") ))
         }
         
         if let size = size {
-            queries.append(URLQueryItem(name: "size", value: String(size)))
+            queries.append(URLQueryItem(name: "pagesize", value: String(size)))
+        }
+        
+        if let page = page {
+            queries.append(URLQueryItem(name: "page", value: String(page)))
         }
         
         return Endpoint(path: "/",
