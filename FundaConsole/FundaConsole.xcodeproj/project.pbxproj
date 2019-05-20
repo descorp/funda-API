@@ -75,11 +75,10 @@
 		40F3A2AA22934ADE0062677D /* FundaConsole */ = {
 			isa = PBXGroup;
 			children = (
+				40F3A316229360AD0062677D /* Utilities */,
 				40F3A2BE22934B0E0062677D /* Resources */,
 				40F3A2AB22934ADE0062677D /* main.swift */,
-				40F3A2B822934B040062677D /* Future.swift */,
 				40F3A2B722934B040062677D /* FutureImplementation.swift */,
-				40F3A2B922934B040062677D /* Reducer.swift */,
 			);
 			path = FundaConsole;
 			sourceTree = "<group>";
@@ -101,6 +100,15 @@
 				40F3A2BD22934B0A0062677D /* config.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		40F3A316229360AD0062677D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A2B922934B040062677D /* Reducer.swift */,
+				40F3A2B822934B040062677D /* Future.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

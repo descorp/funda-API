@@ -25,14 +25,17 @@ var makelaarStatistic: [String: Int] = [:]
 fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
     .transform { $0.paging.aantalPaginas }
     .transform {
-        Reducer(total: $0, nextTry: {
-            fundaAPI.request(Endpoint.get(type: .koop, size: 25, page: $0, search: "amsterdam")).transform { $0.objects ?? [] }
-        }, onSuccess: { fraction in
-            print(". ")
-            fraction.forEach { item in makelaarStatistic[item.makelaarNaam] = 1 }
-        })
-    }.than { $0.start() }
-    .observe { _ in
+        Reducer(total: $0,
+                nextTry: { fundaAPI.request(Endpoint.get(type: .koop, size: 25, page: $0, search: "amsterdam")) .transform { $0.objects ?? [] } },
+                onSuccess: { $0.forEach { item in makelaarStatistic[item.makelaarNaam] = 1 } } )
+    }
+    .than { $0.start() }
+    .observe { result in
+        if case .failure(let error) = result {
+            print("Error: \(error)")
+            return
+        }
+        
         let top10 = makelaarStatistic.sorted(by: { $0 > $1 }).prefix(10)
         
         var position = 1
