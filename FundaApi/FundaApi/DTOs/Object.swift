@@ -176,6 +176,7 @@ public struct Object: Codable {
 public enum Aanvaarding: String, Codable {
     case beschikbaarPerDirect = "BeschikbaarPerDirect"
     case inOverleg = "InOverleg"
+    case beschikbaarPerDatum = "BeschikbaarPer [BeschikbaarheidsDatum]"
 }
 
 public enum BronCode: String, Codable {
