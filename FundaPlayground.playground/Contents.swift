@@ -8,8 +8,6 @@ let builder = FundaRequestBuilder(with: Configuration(bundle: bundle))
 let fundaAPI = RemoteApiProvider(with:  builder)
 
 
-// assignment 1
-
 fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
     .transform { $0.totaalAantalObjecten }
     .than { fundaAPI.request(Endpoint.get(type: .koop, size: $0, search: "amsterdam")) }
@@ -18,6 +16,7 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
     .transform { $0.sorted(by: { $0.value.count > $1.value.count }) }
     .transform { $0.prefix(10) }
     .observe { promis in
+        print("Assignmen 1\r")
         switch promis {
         case .success(let value):
             var position = 1
@@ -27,7 +26,7 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
             }
             break
         case .failure(let error):
-            print("Assignment 1 - Error - \(error)")
+            print("Error: - \(error)")
             break
         }
 }
@@ -42,6 +41,7 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam", "tuin"))
     .transform { $0.sorted(by: { $0.value.count > $1.value.count }) }
     .transform { $0.prefix(10) }
     .observe { promis in
+        print("\rAssignmen 2\r")
         switch promis {
         case .success(let value):
             var position = 1
@@ -51,7 +51,7 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam", "tuin"))
             }
             break
         case .failure(let error):
-            print("Assignment 1 - Error - \(error)")
+            print("Error: \(error)")
             break
         }
 }
