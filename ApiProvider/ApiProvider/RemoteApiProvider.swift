@@ -34,12 +34,19 @@ public class RemoteApiProvider: ApiProvider {
                 return
             }
             
-            if let data = data, let result = try? endpoint.parse(data) {
-                handler(.success(result))
+            guard let data = data else {
+                handler(.failure(ApiProviderError.noData))
                 return
             }
             
-            handler(.failure(ApiProviderError.parsingError))
+            do {
+                let result = try endpoint.parse(data)
+                handler(.success(result))
+            }
+            catch let error {
+                handler(.failure(error))
+            }
+            
         }
         
         task.resume()

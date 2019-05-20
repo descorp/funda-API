@@ -18,6 +18,7 @@ public enum ApiProviderError: Error {
     case network(Error?)
     case parsingError
     case invalidImage
+    case noData
 }
 
 public protocol ApiProvider {
