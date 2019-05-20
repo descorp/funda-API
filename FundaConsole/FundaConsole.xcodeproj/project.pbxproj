@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40F3A2AC22934ADE0062677D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3A2AB22934ADE0062677D /* main.swift */; };
+		40F3A2BA22934B040062677D /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3A2B922934B040062677D /* Reducer.swift */; };
+		40F3A2BB22934B040062677D /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3A2B822934B040062677D /* Future.swift */; };
+		40F3A2BC22934B040062677D /* FutureImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3A2B722934B040062677D /* FutureImplementation.swift */; };
+		40F3A2E522934DF50062677D /* ApiProviderMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F3A2E422934DF50062677D /* ApiProviderMac.framework */; };
+		40F3A313229350CA0062677D /* FundaApiMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F3A312229350CA0062677D /* FundaApiMac.framework */; };
+		40F3A315229355550062677D /* config.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40F3A2BD22934B0A0062677D /* config.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40F3A2A622934ADE0062677D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				40F3A315229355550062677D /* config.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		40F3A2A822934ADE0062677D /* FundaConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FundaConsole; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A2AB22934ADE0062677D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		40F3A2B322934AF90062677D /* ApiProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A2B522934AF90062677D /* FundaApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FundaApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A2B722934B040062677D /* FutureImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureImplementation.swift; sourceTree = "<group>"; };
+		40F3A2B822934B040062677D /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		40F3A2B922934B040062677D /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		40F3A2BD22934B0A0062677D /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		40F3A2E422934DF50062677D /* ApiProviderMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiProviderMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F3A312229350CA0062677D /* FundaApiMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FundaApiMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40F3A2A522934ADE0062677D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A313229350CA0062677D /* FundaApiMac.framework in Frameworks */,
+				40F3A2E522934DF50062677D /* ApiProviderMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40F3A29F22934ADE0062677D = {
+			isa = PBXGroup;
+			children = (
+				40F3A2AA22934ADE0062677D /* FundaConsole */,
+				40F3A2A922934ADE0062677D /* Products */,
+				40F3A2B222934AF90062677D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40F3A2A922934ADE0062677D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A2A822934ADE0062677D /* FundaConsole */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40F3A2AA22934ADE0062677D /* FundaConsole */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A2BE22934B0E0062677D /* Resources */,
+				40F3A2AB22934ADE0062677D /* main.swift */,
+				40F3A2B822934B040062677D /* Future.swift */,
+				40F3A2B722934B040062677D /* FutureImplementation.swift */,
+				40F3A2B922934B040062677D /* Reducer.swift */,
+			);
+			path = FundaConsole;
+			sourceTree = "<group>";
+		};
+		40F3A2B222934AF90062677D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A312229350CA0062677D /* FundaApiMac.framework */,
+				40F3A2E422934DF50062677D /* ApiProviderMac.framework */,
+				40F3A2B322934AF90062677D /* ApiProvider.framework */,
+				40F3A2B522934AF90062677D /* FundaApi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40F3A2BE22934B0E0062677D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A2BD22934B0A0062677D /* config.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40F3A2A722934ADE0062677D /* FundaConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F3A2AF22934ADE0062677D /* Build configuration list for PBXNativeTarget "FundaConsole" */;
+			buildPhases = (
+				40F3A2A422934ADE0062677D /* Sources */,
+				40F3A2A522934ADE0062677D /* Frameworks */,
+				40F3A2A622934ADE0062677D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FundaConsole;
+			productName = FundaConsole;
+			productReference = 40F3A2A822934ADE0062677D /* FundaConsole */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40F3A2A022934ADE0062677D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Vladimir Abramichev";
+				TargetAttributes = {
+					40F3A2A722934ADE0062677D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 40F3A2A322934ADE0062677D /* Build configuration list for PBXProject "FundaConsole" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40F3A29F22934ADE0062677D;
+			productRefGroup = 40F3A2A922934ADE0062677D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40F3A2A722934ADE0062677D /* FundaConsole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40F3A2A422934ADE0062677D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F3A2BB22934B040062677D /* Future.swift in Sources */,
+				40F3A2BA22934B040062677D /* Reducer.swift in Sources */,
+				40F3A2BC22934B040062677D /* FutureImplementation.swift in Sources */,
+				40F3A2AC22934ADE0062677D /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		40F3A2AD22934ADE0062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40F3A2AE22934ADE0062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		40F3A2B022934ADE0062677D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40F3A2B122934ADE0062677D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R596F9CQZ5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40F3A2A322934ADE0062677D /* Build configuration list for PBXProject "FundaConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2AD22934ADE0062677D /* Debug */,
+				40F3A2AE22934ADE0062677D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F3A2AF22934ADE0062677D /* Build configuration list for PBXNativeTarget "FundaConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F3A2B022934ADE0062677D /* Debug */,
+				40F3A2B122934ADE0062677D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40F3A2A022934ADE0062677D /* Project object */;
+}

@@ -1,5 +1,5 @@
 import Foundation
-import ApiProvider
+import ApiProviderMac
 
 public class Future<Value> {
     fileprivate var result: Result<Value>? {

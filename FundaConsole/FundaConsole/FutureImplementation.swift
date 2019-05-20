@@ -1,5 +1,5 @@
 import Foundation
-import ApiProvider
+import ApiProviderMac
 
 public extension RemoteApiProvider {
     func request<T>(_ endpoint: Endpoint<T>) -> Future<T> {
