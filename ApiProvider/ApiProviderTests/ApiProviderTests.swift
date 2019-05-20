@@ -14,7 +14,7 @@ class LondonMetroApiProviderTests: XCTestCase {
     var apiProvider: RemoteApiProvider!
 
     override func setUp() {
-        apiProvider = RemoteApiProvider(urlBuilder: LondonMetroUrlBuilder())
+        apiProvider = RemoteApiProvider(with: LondonMetroUrlBuilder())
     }
 
     override func tearDown() {
@@ -51,8 +51,7 @@ class LondonMetroUrlBuilder: RequestBuilder {
 extension Endpoint where T == Dummy {
     static func bikePoint(id: String) -> Endpoint {
         return Endpoint(
-            body: nil,
-            path: "/BikePoint/\(id)",
+            path: "/BikePoint/\(id)", body: nil,
             queryItems: [],
             parse: T.decode
         )
