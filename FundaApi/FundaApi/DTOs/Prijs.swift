@@ -18,7 +18,7 @@ public struct Prijs: Codable {
     let koopprijs: Int?
     let koopprijsOpAanvraag: String
     let koopprijsTot: Int?
-    let originelePrijs: JSONNull?
+    let originelePrijs: Int?
     let veilingText: String
     
     enum CodingKeys: String, CodingKey {
