@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JSONAny: Codable {
+public class JSONAny: Codable {
     let value: Any
     
     static func decodingError(forCodingPath codingPath: [CodingKey]) -> DecodingError {

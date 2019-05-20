@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Paging: Codable {
-    let aantalPaginas, huidigePagina: Int
-    let volgendeURL: String?
-    let vorigeURL: String?
+public struct Paging: Codable {
+    public let aantalPaginas, huidigePagina: Int
+    public let volgendeURL: String?
+    public let vorigeURL: String?
     
     enum CodingKeys: String, CodingKey {
         case aantalPaginas = "AantalPaginas"

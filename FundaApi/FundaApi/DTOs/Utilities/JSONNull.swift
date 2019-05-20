@@ -8,13 +8,13 @@
 
 import Foundation
 
-class JSONNull: Codable, Hashable {
+public class JSONNull: Codable, Hashable {
     
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
     
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(0)
     }
     

@@ -5,14 +5,14 @@
 import Foundation
 
 public struct Response<T: Codable> : Codable {
-    let accountStatus: Int
-    let emailNotConfirmed, validationFailed: Bool
-    let validationReport: JSONNull?
-    let website: Int
-    let metadata: Metadata
-    let objects: [T]?
-    let paging: Paging
-    let totaalAantalObjecten: Int
+    public let accountStatus: Int
+    public let emailNotConfirmed, validationFailed: Bool
+    public let validationReport: JSONNull?
+    public let website: Int
+    public let metadata: Metadata
+    public let objects: [T]?
+    public let paging: Paging
+    public let totaalAantalObjecten: Int
     
     enum CodingKeys: String, CodingKey {
         case accountStatus = "AccountStatus"

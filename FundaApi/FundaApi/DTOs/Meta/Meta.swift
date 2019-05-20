@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Metadata: Codable {
-    let objectType, omschrijving, titel: String
+public struct Metadata: Codable {
+    public let objectType, omschrijving, titel: String
     
     enum CodingKeys: String, CodingKey {
         case objectType = "ObjectType"

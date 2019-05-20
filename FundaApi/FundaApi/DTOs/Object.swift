@@ -10,63 +10,60 @@ import Foundation
 
 public struct Object: Codable {
     private let aanmeldDatumRaw, publicatieDatumRaw: String
-    private let datumAanvaardingRaw,
-    datumOndertekeningAkteRaw,
-    gewijzigdDatumRaw,
-    transactieAfmeldDatumRaw: String?
+    private let datumAanvaardingRaw, datumOndertekeningAkteRaw, gewijzigdDatumRaw, transactieAfmeldDatumRaw: String?
     
-    let aangebodenSindsTekst: String
-    let aantalBeschikbaar: Int?
-    let aantalKamers: Int
-    let aantalKavels: Int?
-    let aanvaarding: Aanvaarding
-    let adres: String
-    let afstand: Int
-    let bronCode: BronCode
-    let childrenObjects: [JSONAny]
-    let foto, fotoLarge, fotoLargest, fotoMedium: String
-    let fotoSecure: String
-    let globalID: Int
-    let groupByObjectType: String
-    let heeft360GradenFoto, heeftBrochure, heeftOpenhuizenTopper, heeftOverbruggingsgrarantie: Bool
-    let heeftPlattegrond, heeftTophuis, heeftVeiling, heeftVideo: Bool
-    let huurPrijsTot, huurprijs: Int?
-    let huurprijsFormaat: String?
-    let id: String
-    let inUnitsVanaf: JSONNull?
-    let indProjectObjectType: Bool
-    let indTransactieMakelaarTonen: JSONNull?
-    let isSearchable, isVerhuurd, isVerkocht, isVerkochtOfVerhuurd: Bool
-    let koopprijs: Int?
-    let koopprijsFormaat: String?
-    let koopprijsTot: Int?
-    let makelaarID: Int
-    let makelaarNaam: String
-    let mobileURL: String
-    let note: JSONNull?
-    let openHuis: [String]
-    let oppervlakte: Int
-    let perceeloppervlakte: Int?
-    let postcode: String
-    let prijs: Prijs
-    let prijsGeformatteerdHTML, prijsGeformatteerdTextHuur, prijsGeformatteerdTextKoop: String
-    let producten: [Producten]
-    let project: Project
-    let projectNaam: JSONNull?
-    let promoLabel: PromoLabel
-    let publicatieStatus: Int
-    let savedDate: JSONNull?
-    let soortAanbod: SoortAanbod
-    let objectSoortAanbod: Int
-    let startOplevering, timeAgoText, transactieMakelaarID: JSONNull?
-    let transactieMakelaarNaam: JSONNull?
-    let typeProject: Int
-    let url: String
-    let verkoopStatus: VerkoopStatus
-    let wgs84X, wgs84Y: Double
-    let woonOppervlakteTot, woonoppervlakte: Int
-    let woonplaats: String
-    let zoekType: [Int]
+    public let aangebodenSindsTekst: String
+    public let aantalBeschikbaar: Int?
+    public let aantalKamers: Int
+    public let aantalKavels: Int?
+    public let aanvaarding: Aanvaarding
+    public let adres: String
+    public let afstand: Int
+    public let bronCode: BronCode
+    public let childrenObjects: [JSONAny]
+    public let foto, fotoLarge, fotoLargest, fotoMedium: String
+    public let fotoSecure: String
+    public let globalID: Int
+    public let groupByObjectType: String
+    public let heeft360GradenFoto, heeftBrochure, heeftOpenhuizenTopper, heeftOverbruggingsgrarantie: Bool
+    public let heeftPlattegrond, heeftTophuis, heeftVeiling, heeftVideo: Bool
+    public let huurPrijsTot, huurprijs: Int?
+    public let huurprijsFormaat: String?
+    public let id: String
+    public let inUnitsVanaf: JSONNull?
+    public let indProjectObjectType: Bool
+    public let indTransactieMakelaarTonen: JSONNull?
+    public let isSearchable, isVerhuurd, isVerkocht, isVerkochtOfVerhuurd: Bool
+    public let koopprijs: Int?
+    public let koopprijsFormaat: String?
+    public let koopprijsTot: Int?
+    public let makelaarID: Int
+    public let makelaarNaam: String
+    public let mobileURL: String
+    public let note: JSONNull?
+    public let openHuis: [String]
+    public let oppervlakte: Int
+    public let perceeloppervlakte: Int?
+    public let postcode: String
+    public let prijs: Prijs
+    public let prijsGeformatteerdHTML, prijsGeformatteerdTextHuur, prijsGeformatteerdTextKoop: String
+    public let producten: [Producten]
+    public let project: Project
+    public let projectNaam: JSONNull?
+    public let promoLabel: PromoLabel
+    public let publicatieStatus: Int
+    public let savedDate: JSONNull?
+    public let soortAanbod: SoortAanbod
+    public let objectSoortAanbod: Int
+    public let startOplevering, timeAgoText, transactieMakelaarID: JSONNull?
+    public let transactieMakelaarNaam: JSONNull?
+    public let typeProject: Int
+    public let url: String
+    public let verkoopStatus: VerkoopStatus
+    public let wgs84X, wgs84Y: Double
+    public let woonOppervlakteTot, woonoppervlakte: Int
+    public let woonplaats: String
+    public let zoekType: [Int]
     
     var aanmeldDatum: Date {
         return Date()
