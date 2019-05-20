@@ -13,7 +13,7 @@ public struct PromoLabel: Codable {
     let promotionPhotos: [String]
     let promotionPhotosSecure: [String]?
     let promotionType, ribbonColor: Int
-    let ribbonText: JSONNull?
+    let ribbonText: JSONAny?
     let tagline: String?
     
     enum CodingKeys: String, CodingKey {
