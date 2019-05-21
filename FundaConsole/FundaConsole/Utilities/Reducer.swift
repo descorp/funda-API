@@ -4,52 +4,37 @@ public class Reducer<T> {
     private let nextTry: (Int) -> Future<[T]>
     private let onSuccess: ([T]) -> Void
     private let total: Int
-    private let queue = DispatchQueue(label: "reduction.queue", qos: .userInitiated, attributes: .concurrent)
-    private let semaphore = DispatchSemaphore(value: 3)
-    
-    public private(set) var progress: Int = 0
+    private let queue: DispatchQueue
+    private let semaphore = DispatchSemaphore(value: 1)
     
     public init(total: Int, nextTry: @escaping (Int) -> Future<[T]>, onSuccess: @escaping ([T]) -> Void) {
         self.total = total
         self.nextTry = nextTry
         self.onSuccess = onSuccess
+        queue = DispatchQueue(label: "reduction.queue\(total)", qos: .userInitiated)
     }
     
     public func start(verbose: Bool = true) -> Future<Bool> {
         let promise = Promise<Bool>()
-        print("Processing..")
-        var oldProgress = progress
-        queue.async { [weak self] in
-            guard let strongSelf = self else { return }
-            
-            for i in 0...strongSelf.total {
-                strongSelf.semaphore.wait()
-                strongSelf.nextTry(i).observe { [weak self] in
-                    guard let strongSelf = self else { return }
+        if (verbose) { print("Processing..") }
+        var step = 0
+        queue.async {
+            while step < self.total {
+                self.semaphore.wait()
+                self.nextTry(step).observe {
                     switch $0 {
                     case .success(let result):
-                        strongSelf.progress += 1
-                        strongSelf.onSuccess(result)
+                        step += 1
+                        self.onSuccess(result)
+                        if (verbose) { DispatchQueue.main.async { print("Progress: \(self.total) / \(step)") } }
                     case .failure(_):
-                        if verbose { DispatchQueue.main.async { print("waiting..") } }
-                        
-                        sleep(10)
+                        if verbose { DispatchQueue.main.async { print("Waiting..") } }
+                        sleep(15)
                     }
-                    
-                    let progress = Int(Double(strongSelf.progress) / Double(strongSelf.total) * 100)
-                    if (verbose && oldProgress != progress) {
-                        DispatchQueue.main.async { print("Progress: \(progress)%") }
-                        oldProgress = progress
-                    }
-                    
-                    if strongSelf.progress >= strongSelf.total {
-                        print("Done!")
-                        promise.resolve(with: true)
-                    }
-                    
-                    strongSelf.semaphore.signal()
+                    self.semaphore.signal()
                 }
             }
+            promise.resolve(with: true)
         }
         
         return promise 
