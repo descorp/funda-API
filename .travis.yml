@@ -1,26 +1,29 @@
 language: objective-c
 osx_image: xcode10
+
 env:
   global:
   - WORKSPACE="FundaAPI.xcworkspace"
-  matrix:
-  - DESTINATION="OS=12.0,name=iPhone 6"   SCHEME="ApiProvider"        ACTION="build
-    test"
-  - DESTINATION="platform=macOS"   SCHEME="ApiProviderMac"     ACTION="build test"
-  - DESTINATION="OS=12.0,name=iPhone 6"   SCHEME="FundaApi"           ACTION="build
-    test"
-  - DESTINATION="platform=macOS"   SCHEME="FundaApiMac"        ACTION="build test"
-before_install:
-- brew update
-- brew outdated xctool || brew upgrade xctool
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-before_script:
-- python ./scripts/apply_secret.py $FUNDA_API_KEY
-script:
-- set -o pipefail
-- xcodebuild -scheme "$SCHEME" -workspace "$WORKSPACE" -destination "$DESTINATION"
-  clean $ACTION | xcpretty
-after_success:
-- bash <(curl -s https://codecov.io/bash)
-dd:
   secure: YBe+r5VOsa/HlmG92iE9zCvEtWHrcTyGK1LaonvEjd4FapLbuQ4yQNBEFhg9f6DsWT1oGtL2ogNJJQ2jqXYMoo0ikWUFY1CnaGGoFyLb5wwUuMRP0xG7AQHUsSoUM3H+bxW4qAT34g0yQAfcwazEyNW/nXQWy0kqAqbcXOg7KyDarv/yF9e8SO+cgNTI68sWwqbPZLFlrLxQbqjIa4c/z43geyWzYPwVl27WYzviXPsRnmd1LPbBc0RTIEHSpEkECKP0Rndxd1RJKy36canVrn+/cmr0oIXorJz1XnJkYUpkJUTic1vJ/8+fwQKcYVgMPL2Gdazc4eMvTgcc3RoY5ZmhwJcg+2XGK8jhtyw5DG5lVnEBgXx2Ez99pUYSisjfutbn8+3yai2FqyMLg/Jgv4x1oN64C0FkG8GfRavWmi2iimqdYi/Asb+hotZZiYHfPOzEnJFO//Pc6GArvI1UaastoiQt5fL1bPtAsWQA5qD3DHULEK+z1MNhx0awtye3iimRMHfZ6iPku9UQPdnY0cW+bk6JMefeTS3zN+xKXielkPN6f4DSr9xfYWKtbQ1YnytUQWrdPwWKdarRaYbfQui6M8vTbX7NA+EZSO+XnvLhgjvQAQ0zvMDnr1KPzFJyvmUPtMG0vTW10If1ShSt8zSzkoEAogCarlH9vM8y8E0=
+
+
+  matrix:
+  - DESTINATION="OS=12.0,name=iPhone 6"   SCHEME="ApiProvider"        ACTION="build test"
+  - DESTINATION="platform=macOS"          SCHEME="ApiProviderMac"     ACTION="build test"
+  - DESTINATION="OS=12.0,name=iPhone 6"   SCHEME="FundaApi"           ACTION="build test"
+  - DESTINATION="platform=macOS"          SCHEME="FundaApiMac"        ACTION="build test"
+
+before_install:
+  - brew update
+  - brew outdated xctool || brew upgrade xctool
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+before_script:
+  - python ./scripts/apply_secret.py $FUNDA_API_KEY
+
+script:
+  - set -o pipefail
+  - xcodebuild -scheme "$SCHEME" -workspace "$WORKSPACE" -destination "$DESTINATION" clean $ACTION | xcpretty
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
