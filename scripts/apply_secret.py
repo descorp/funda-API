@@ -22,4 +22,3 @@ def applySecret(secret, basicPath):
                 file.write(filedata)
 
 applySecret(apiKey, libraryPath)
-applySecret(apiKey, appPath)
