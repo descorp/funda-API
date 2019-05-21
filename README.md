@@ -47,3 +47,7 @@ Uses Promises under the hood
 * Run the console app
 
 Execution time ~3 minutes
+
+## Known bugs:
+
+Console App does not mitigate the first request, so if the very first request didn't pass throttling it will fail the whole assignment
