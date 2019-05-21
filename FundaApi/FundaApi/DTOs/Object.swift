@@ -14,9 +14,9 @@ public struct Object: Codable {
     
     public let aangebodenSindsTekst: String
     public let aantalBeschikbaar: Int?
-    public let aantalKamers: Int
+    public let aantalKamers: Int?
     public let aantalKavels: Int?
-    public let aanvaarding: Aanvaarding
+    public let aanvaarding: Aanvaarding?
     public let adres: String
     public let afstand: Int
     public let bronCode: BronCode
@@ -49,7 +49,7 @@ public struct Object: Codable {
     public let prijsGeformatteerdHTML, prijsGeformatteerdTextHuur, prijsGeformatteerdTextKoop: String
     public let producten: [Producten]
     public let project: Project
-    public let projectNaam: JSONNull?
+    public let projectNaam: String?
     public let promoLabel: PromoLabel
     public let publicatieStatus: Int
     public let savedDate: JSONNull?
@@ -61,7 +61,7 @@ public struct Object: Codable {
     public let url: String
     public let verkoopStatus: VerkoopStatus
     public let wgs84X, wgs84Y: Double
-    public let woonOppervlakteTot, woonoppervlakte: Int
+    public let woonOppervlakteTot, woonoppervlakte: Int?
     public let woonplaats: String
     public let zoekType: [Int]
     
@@ -190,15 +190,22 @@ public enum Producten: String, Codable {
     case the360Fotos = "360-fotos"
     case toppositie = "Toppositie"
     case video = "Video"
+    case inbeeld = "Inbeeld"
 }
 
 public enum SoortAanbod: String, Codable {
     case woonhuis
     case appartement
+    case parkeergelegenheid
+    case bouwgrond
+    case overigaanbod
 }
 
 public enum VerkoopStatus: String, Codable {
     case statusBeschikbaar = "StatusBeschikbaar"
+    case verkochtOnderVoorbehoud = "Verkocht onder voorbehoud"
+    case onderBod = "OnderBod"
+    case onderOptie = "OnderOptie"
 }
 
 // MARK: Encode/decode helpers

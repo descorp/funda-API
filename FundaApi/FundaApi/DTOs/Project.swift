@@ -9,13 +9,15 @@
 import Foundation
 
 public struct Project: Codable {
+    let naam: String?
     let aantalKamersTotEnMet, aantalKamersVan, aantalKavels, adres: JSONNull?
-    let friendlyURL, gewijzigdDatum, globalID: JSONNull?
+    let friendlyURL, gewijzigdDatum: String?
+    let globalID: Int?
     let hoofdFoto: String
     let indIpix, indPDF, indPlattegrond, indTop: Bool
     let indVideo: Bool
     let internalID: String
-    let maxWoonoppervlakte, minWoonoppervlakte, naam, omschrijving: JSONNull?
+    let maxWoonoppervlakte, minWoonoppervlakte, omschrijving: JSONNull?
     let openHuizen: [JSONAny]
     let prijs: Prijs?
     let plaats, prijsGeformatteerd, publicatieDatum: JSONNull?
