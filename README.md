@@ -9,7 +9,7 @@ Client fot Funda Partner API
 
 ## Structure
 
-Solution spited into 2 projects + Swift Playground :
+Solution spited into 2 projects + Mac Consol app :
 
 ### ApiProvider (iOS and Mac)
 Library to work with Json API's. Providers convenient and secure way to access HTTP APIs
@@ -21,9 +21,24 @@ DTOs are generated via https://app.quicktype.io/.
 URL and API_KEY are set via the configuration file in FundaConsole app.
 
 ### FundaConsole
-Mac Console application to complete the basic searching scenarios.
-Both assignments executed sequencialy
+Mac Console application to performe search and statistic analysis.
+Consis of two assignments executed sequencialy
 Uses Promises under the hood
+
+#### Output example
+      
+       = = = = = 
+      Top makelaars by objects listed for sale (Amsterdam):
+      #1 Broersma Makelaardij - 111
+      #2 Makelaardij Van der Linden Amsterdam - 87
+      #3 ERA Van De Steege - 84
+      #4 Eefje Voogd Makelaardij - 84
+      #5 Hallie & Van Klooster Makelaardij - 81
+      #6 Makelaarsland - 75
+      #7 Hoekstra en van Eck Amsterdam West - 68
+      #8 Ramón Mossel Makelaardij o.g. B.V. - 60
+      #9 Hoekstra en van Eck Amsterdam Noord - 52
+      #10 De Graaf & Groot Makelaars - 45
 
 ## How to run
 
