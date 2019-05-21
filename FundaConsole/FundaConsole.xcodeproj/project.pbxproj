@@ -77,8 +77,8 @@
 			children = (
 				40F3A316229360AD0062677D /* Utilities */,
 				40F3A2BE22934B0E0062677D /* Resources */,
+				40F3A3192293FEB00062677D /* Extensions */,
 				40F3A2AB22934ADE0062677D /* main.swift */,
-				40F3A2B722934B040062677D /* FutureImplementation.swift */,
 			);
 			path = FundaConsole;
 			sourceTree = "<group>";
@@ -109,6 +109,14 @@
 				40F3A2B822934B040062677D /* Future.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		40F3A3192293FEB00062677D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40F3A2B722934B040062677D /* FutureImplementation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
