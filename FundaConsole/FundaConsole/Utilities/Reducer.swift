@@ -4,7 +4,7 @@ public class Reducer<T> {
     private let nextTry: (Int) -> Future<[T]>
     private let onSuccess: ([T]) -> Void
     private let total: Int
-    private let queue = DispatchQueue(label: "reduction.queue", attributes: .concurrent)
+    private let queue = DispatchQueue(label: "reduction.queue", qos: .userInitiated, attributes: .concurrent)
     private let semaphore = DispatchSemaphore(value: 3)
     
     public private(set) var progress: Int = 0
@@ -15,31 +15,40 @@ public class Reducer<T> {
         self.onSuccess = onSuccess
     }
     
-    public func start() -> Future<Bool> {
+    public func start(verbose: Bool = true) -> Future<Bool> {
         let promise = Promise<Bool>()
-        
-        for i in 0...self.total {
-            queue.async { [weak self] in
-                guard let strongSelf = self else { return }
-                
+        print("Processing..")
+        var oldProgress = progress
+        queue.async { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            for i in 0...strongSelf.total {
                 strongSelf.semaphore.wait()
                 strongSelf.nextTry(i).observe { [weak self] in
+                    guard let strongSelf = self else { return }
                     switch $0 {
                     case .success(let result):
                         strongSelf.progress += 1
-                        DispatchQueue.main.async { [weak self] in
-                            self?.onSuccess(result)
-                        }
+                        strongSelf.onSuccess(result)
                     case .failure(_):
-                        sleep(500)
+                        if verbose { DispatchQueue.main.async { print("waiting..") } }
+                        
+                        sleep(10)
                     }
+                    
+                    let progress = Int(Double(strongSelf.progress) / Double(strongSelf.total) * 100)
+                    if (verbose && oldProgress != progress) {
+                        DispatchQueue.main.async { print("Progress: \(progress)%") }
+                        oldProgress = progress
+                    }
+                    
+                    if strongSelf.progress >= strongSelf.total {
+                        print("Done!")
+                        promise.resolve(with: true)
+                    }
+                    
+                    strongSelf.semaphore.signal()
                 }
-                
-                if strongSelf.progress == strongSelf.total {
-                    promise.resolve(with: true)
-                }
-                
-                strongSelf.semaphore.signal()
             }
         }
         

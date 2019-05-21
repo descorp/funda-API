@@ -26,8 +26,12 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
     .transform { $0.paging.aantalPaginas }
     .transform {
         Reducer(total: $0,
-                nextTry: { fundaAPI.request(Endpoint.get(type: .koop, size: 25, page: $0, search: "amsterdam")) .transform { $0.objects ?? [] } },
-                onSuccess: { $0.forEach { item in makelaarStatistic[item.makelaarNaam] = 1 } } )
+                nextTry: {
+                    fundaAPI.request(Endpoint.get(type: .koop, size: 25, page: $0, search: "amsterdam"))
+                    .transform { $0.objects ?? [] } },
+                onSuccess: {
+                    $0.forEach { makelaarStatistic[$0.makelaarNaam] = (makelaarStatistic[$0.makelaarNaam] ?? 0) + 1  }
+        })
     }
     .than { $0.start() }
     .observe { result in
@@ -36,7 +40,7 @@ fundaAPI.request(Endpoint.get(type: .koop, search: "amsterdam"))
             return
         }
         
-        let top10 = makelaarStatistic.sorted(by: { $0 > $1 }).prefix(10)
+        let top10 = makelaarStatistic.sorted(by: { $0.value > $1.value }).prefix(10)
         
         var position = 1
         top10.forEach {
