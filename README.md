@@ -11,21 +11,24 @@ Client fot Funda Partner API
 
 Solution spited into 2 projects + Swift Playground :
 
-### ApiProvider
+### ApiProvider (iOS and Mac)
 Library to work with Json API's. Providers convenient and secure way to access HTTP APIs
 
-### FundaApi
+### FundaApi (iOS and Mac)
 Wrapper based on ApiProvider to implement Funda API. 
 Contains DTO, Endpoint and Tests. 
 DTOs are generated via https://app.quicktype.io/. 
-URL and API_KEY are set via the configuration file.
+URL and API_KEY are set via the configuration file in FundaConsole app.
 
-### FundaPlayground
-Swift playground to complete the basic searching scenarios.
+### FundaConsole
+Mac Console application to complete the basic searching scenarios.
+Both assignments executed sequencialy
 Uses Promises under the hood
 
 ## How to run
 
 * clone solution
 * replace {API_KEY} in config.info with your API Key
-* Run the app
+* Run the console app
+
+Execution time ~3 minutes
