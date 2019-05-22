@@ -1,5 +1,6 @@
 [![codebeat badge](https://codebeat.co/badges/fc671989-7aeb-4b3b-a5fb-9d918fcd0e54)](https://codebeat.co/projects/github-com-descorp-funda-api-master)
 [![Build Status](https://travis-ci.org/descorp/funda-API.svg?branch=master)](https://travis-ci.org/descorp/funda-API)
+[![codecov](https://codecov.io/gh/descorp/funda-API/branch/master/graph/badge.svg)](https://codecov.io/gh/descorp/funda-API)
 
 <img src="https://assets.fstatic.nl/master_2282/assets/components/logo/fundawonen-logo.svg" alt="logo" width="250"/>
 
