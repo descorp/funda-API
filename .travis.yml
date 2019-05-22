@@ -4,17 +4,12 @@ osx_image: xcode10.2
 env:
   global:
   - WORKSPACE="FundaAPI.xcworkspace"
+  - ACTION="build test"
   - secure: mZeyLLbDaXusoaBFYtpFahJbZBU3DMr3KzbKgVzrfrJGJTCqPZRJ6/UWn+tmUAj/jeDQ940H4WtrhRGLo+kofKkxt/b1yVUOBuoBKRDezp6VnKJCNzKiID4aFeDBNsphuV1c46GQv5fQib76ibWEqqkdFFlQa5x5ciSokGwZ8yny/whE+h1zVE3zm9GZ4wjJyXWl8JzfKhYkAIV1t9pWy6bALnXZnIomoMrtXEYf6tCmYkD8Pp3hsUgbVtYudPrAHMJxN/NZ5CznN15x7PzRRZbZndDpIKKfPtcSeqdZp/1xWdwDQkq+jOY0e09YFZp4S2Nbsc1LgO5gEaY5Jj1YAJ64RM27qtD+vqNvNOJPbwYOa+3AXQsv4sL9EkqsPoEfxGlkvjinybVMolD49x61WcPD9aOEVvfa/s8k5zMCFYtqyGh7fdnyLw0idagKw46p/bCCt6zTtN68ALpaU+oGePqGvyBKyaqIMXCpm9szfd2AZUT2PYkhfFRslWyesaKsxG2x/skNqOJg2/TqlBaXeYLAIK+lZG/i9fDPnMzKjxWVdyVykehw/1Fe8E9+P5k1QLfEEhbUbMilKm6jbVhNtIbqvEHfvJ+sLDJ1uRSswx2ZPVrdP11uIE05+JprnS31tOxAiBd09urL0qgrw6iTn9PL4T+JOTdb0O/m+uzoEOQ=
   
   matrix:
-  - DESTINATION="OS=12.2,name=iPhone 6"   SCHEME="ApiProvider"        ACTION="build
-    test"
-  - DESTINATION="platform=macOS"          SCHEME="ApiProviderMac"     ACTION="build
-    test"
-  - DESTINATION="OS=12.2,name=iPhone 6"   SCHEME="FundaApi"           ACTION="build
-    test"
-  - DESTINATION="platform=macOS"          SCHEME="FundaApiMac"        ACTION="build
-    test"
+  - DESTINATION="OS=12.2,name=iPhone 6"   SCHEME="ApiProvider"
+  - DESTINATION="OS=12.2,name=iPhone 6"   SCHEME="FundaApi"
     
 before_install:
 - brew update
